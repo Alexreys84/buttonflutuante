@@ -1,0 +1,65 @@
+#div-fixa{
+    position: fixed;
+    bottom: 20px;
+    margin: 0 20px;
+    background: rgb(89,245,122);
+    width: 230px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.5s all;
+}
+#div-fixa.shrink{
+    width: 50px;
+    transition: 0.5s all;
+    overflow: hidden;
+}
+#div-fixa img{
+    width: 50px;
+    height: 50px;
+
+}
+
+#div-fixa a .flex-itens{
+    display: flex;
+    align-items: center;
+
+}
+#div-fixa a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+}
+#div-fixa a .flex-itens span {
+    display: block;
+    font-family: 'Roboto', sans-serif; 
+    font-weight: bold;
+    color: black;
+    margin-left: 5px;
+    font-size: 18px;
+    min-width: 170px;
+    opacity: 1;
+    text-decoration: none; 
+}
+
+#div-fixa a .flex-itens span.aparcer{
+    transition: 0.5 all;
+    opacity: 1;
+}
+.flutuar{
+    animation-name: flutuar;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+
+
+}
+@keyframes flutuar{
+    form{
+        transform: translate3d(0,0,0);
+        filter: brightness(100%);
+
+    }
+    to{
+        transform: translate3d(0,-15px,0);
+        filter: brightness(150%);
+    }
+}
