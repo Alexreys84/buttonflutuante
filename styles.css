@@ -73,21 +73,21 @@
     bottom: 60px; /* Posiciona o botão 60px acima do rodapé */
     margin: 0 20px; /* Adiciona margens laterais */
     background: rgb(89, 245, 122); /* Define uma cor de fundo verde claro */
-    width: 230px; /* Define a largura do botão */
-    border-radius: 50px; /* Arredonda as bordas do botão */
+    width: 200px; /* Define a largura do botão */
+    border-radius: 30px; /* Arredonda as bordas do botão */
     cursor: pointer; /* Define o cursor como 'pointer' ao passar o mouse sobre o botão */
     transition: 0.5s all; /* Define uma transição suave para todas as propriedades que mudam */
 }
 
 #div-fixa.shrink {
-    width: 50px; /* Reduz a largura do botão para 50px quando encolhido */
+    width: 35px; /* Reduz a largura do botão para 50px quando encolhido */
     transition: 0.5s all; /* Aplica uma transição suave ao encolher o botão */
     overflow: hidden; /* Oculta o conteúdo que não couber dentro do botão */
 }
 
 #div-fixa img {
-    width: 50px; /* Define a largura da imagem dentro do botão */
-    height: 50px; /* Define a altura da imagem */
+    width: 35px; /* Define a largura da imagem dentro do botão */
+    height: 35px; /* Define a altura da imagem */
 }
 
 #div-fixa a .flex-itens {
