@@ -1,65 +1,137 @@
-#div-fixa{
-    position: fixed;
-    bottom: 20px;
-    margin: 0 20px;
-    background: rgb(89,245,122);
-    width: 230px;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: 0.5s all;
-}
-#div-fixa.shrink{
-    width: 50px;
-    transition: 0.5s all;
-    overflow: hidden;
-}
-#div-fixa img{
-    width: 50px;
-    height: 50px;
-
+/* Estilos para o rodapé do WhatsApp */
+#div-fixa {
+    position: fixed; /* Fixa o elemento na página, permanecendo visível mesmo ao rolar a página */
+    bottom: 20px; /* Posiciona o elemento 20px acima do fundo da tela */
+    right: 20px; /* Posiciona o elemento 20px à esquerda da borda direita da tela */
+    background-color: #25d366; /* Define a cor de fundo como verde, cor característica do WhatsApp */
+    border-radius: 50px; /* Arredonda os cantos do elemento */
+    padding: 10px; /* Adiciona 10px de espaçamento interno ao redor do conteúdo */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Aplica uma sombra para dar profundidade ao botão */
 }
 
-#div-fixa a .flex-itens{
-    display: flex;
-    align-items: center;
-
+.flutuar {
+    animation: flutuar 2s infinite ease-in-out; /* Aplica a animação 'flutuar' continuamente, com duração de 2 segundos */
 }
+
+.flex-itens {
+    display: flex; /* Define um layout flexível para os itens dentro desse container */
+    align-items: center; /* Alinha os itens (imagem e texto) verticalmente no centro */
+}
+
+.flex-itens img {
+    width: 40px; /* Define a largura da imagem como 40px */
+    margin-right: 10px; /* Adiciona um espaço de 10px à direita da imagem */
+}
+
+/* Definição da animação flutuar */
+@keyframes flutuar {
+    0% { transform: translateY(0); } /* No início, o elemento está na posição original */
+    50% { transform: translateY(-5px); } /* No meio da animação, o elemento se move 5px para cima */
+    100% { transform: translateY(0); } /* No final, o elemento retorna à posição original */
+}
+
+/* Estilos para o novo rodapé */
+.custom-footer {
+    background-color: #343a40; /* Cor de fundo escura para o rodapé */
+    color: #fff; /* Cor do texto em branco */
+    padding: 10px 0; /* Espaçamento interno de 10px no topo e no fundo do rodapé */
+    position: fixed; /* Fixa o rodapé na parte inferior da página */
+    bottom: 0; /* Posiciona o rodapé exatamente no fundo da página */
+    width: 100%; /* O rodapé ocupa toda a largura da página */
+}
+
+.custom-footer .container {
+    display: flex; /* Define um layout flexível para os elementos do rodapé */
+    justify-content: space-between; /* Distribui os itens igualmente com espaço entre eles */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    padding: 0 15px; /* Adiciona 15px de espaçamento interno nas laterais do container */
+}
+
+.custom-footer .footer-text {
+    text-align: center; /* Centraliza o texto dentro do container de texto */
+}
+
+.custom-footer .footer-text p {
+    margin: 0; /* Remove a margem padrão dos parágrafos */
+    font-size: 14px; /* Define o tamanho da fonte para 14px */
+}
+
+.custom-footer .social-icons a {
+    color: #fff; /* Define a cor dos ícones das redes sociais como branca */
+    font-size: 20px; /* Define o tamanho da fonte dos ícones para 20px */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    margin-left: 15px; /* Adiciona um espaço de 15px à esquerda dos ícones */
+}
+
+.custom-footer .social-icons a:hover {
+    color: #007bff; /* Muda a cor dos ícones para azul claro ao passar o mouse */
+}
+
+/* Estilos adicionais para o botão fixo (WhatsApp) */
+#div-fixa {
+    position: fixed; /* Fixa o botão na tela */
+    bottom: 60px; /* Posiciona o botão 60px acima do rodapé */
+    margin: 0 20px; /* Adiciona margens laterais */
+    background: rgb(89, 245, 122); /* Define uma cor de fundo verde claro */
+    width: 230px; /* Define a largura do botão */
+    border-radius: 50px; /* Arredonda as bordas do botão */
+    cursor: pointer; /* Define o cursor como 'pointer' ao passar o mouse sobre o botão */
+    transition: 0.5s all; /* Define uma transição suave para todas as propriedades que mudam */
+}
+
+#div-fixa.shrink {
+    width: 50px; /* Reduz a largura do botão para 50px quando encolhido */
+    transition: 0.5s all; /* Aplica uma transição suave ao encolher o botão */
+    overflow: hidden; /* Oculta o conteúdo que não couber dentro do botão */
+}
+
+#div-fixa img {
+    width: 50px; /* Define a largura da imagem dentro do botão */
+    height: 50px; /* Define a altura da imagem */
+}
+
+#div-fixa a .flex-itens {
+    display: flex; /* Define um layout flexível para os itens dentro do link */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+}
+
 #div-fixa a {
     text-decoration: none; /* Remove o sublinhado dos links */
 }
+
 #div-fixa a .flex-itens span {
-    display: block;
-    font-family: 'Roboto', sans-serif; 
-    font-weight: bold;
-    color: black;
-    margin-left: 5px;
-    font-size: 18px;
-    min-width: 170px;
-    opacity: 1;
-    text-decoration: none; 
+    display: block; /* Exibe o elemento span como um bloco */
+    font-family: 'Roboto', sans-serif; /* Define a fonte do texto como Roboto */
+    font-weight: bold; /* Deixa o texto em negrito */
+    color: black; /* Define a cor do texto como preta */
+    margin-left: 5px; /* Adiciona um espaçamento de 5px à esquerda do texto */
+    font-size: 14px; /* Define o tamanho da fonte para 18px */
+    min-width: 170px; /* Define uma largura mínima para o texto */
+    opacity: 1; /* Define a opacidade do texto como completamente visível */
 }
 
-#div-fixa a .flex-itens span.aparcer{
-    transition: 0.5 all;
-    opacity: 1;
+#div-fixa a .flex-itens span.aparcer {
+    transition: 0.5 all; /* Aplica uma transição suave a todas as mudanças de propriedades */
+    opacity: 1; /* Define a opacidade inicial do texto */
 }
-.flutuar{
-    animation-name: flutuar;
-    animation-duration: 0.7s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: ease-in-out;
 
-
+/* Definição da animação 'flutuar' */
+.flutuar {
+    animation-name: flutuar; /* Associa a animação com o nome 'flutuar' */
+    animation-duration: 0.7s; /* Define a duração de cada ciclo da animação como 0.7 segundos */
+    animation-iteration-count: infinite; /* A animação é repetida indefinidamente */
+    animation-direction: alternate; /* A animação vai alternando entre os dois sentidos */
+    animation-timing-function: ease-in-out; /* A velocidade da animação acelera no início e desacelera no final */
 }
-@keyframes flutuar{
-    form{
-        transform: translate3d(0,0,0);
-        filter: brightness(100%);
 
+/* Definição de como o botão flutuante se move */
+@keyframes flutuar {
+    form {
+        transform: translate3d(0, 0, 0); /* Define a posição inicial como 0px de deslocamento */
+        filter: brightness(100%); /* Define o brilho normal */
     }
-    to{
-        transform: translate3d(0,-15px,0);
-        filter: brightness(150%);
+    to {
+        transform: translate3d(0, -15px, 0); /* Move o elemento 15px para cima durante a animação */
+        filter: brightness(150%); /* Aumenta o brilho do elemento ao flutuar */
     }
 }
